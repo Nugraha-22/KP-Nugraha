@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-icons.css">
+    <link rel="stylesheet" href="vendor/solar.css">
+    <script src="vendor/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-success">
+      <div class="container">
+        <a class="navbar-brand" href="#"></a>
+          <img src="images/logo_kuy.png" alt="logo kopi kuy" class="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item p-2">
+              <a class="nav-link text-white" href="#">Best Seller</a>
+            </li>
+            <li class="nav-item p-2">
+              <a class="nav-link text-white" href="#">Our Team</a>
+            </li>
+            <li class="nav-item p-2">
+              <a class="nav-link text-white" href="#">Review</a>
+            </li>
+            <li class="nav-item p-2">
+              <a class="nav-link text-white" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item p-2">
+              <a class="nav-link text-white" href="#">Shop</a>
+            </li>
+            <li class="nav-item p-2">
+              <a class="btn btn-outline-light" href="#">Chat <i class="bi bi-whatsapp"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="content">
+        <div class="container">
+            <div class="row text-center p-5">
+                <h2>Pilih Produk Anda</h2>
+                <p>kualitas terbaik biji pilihan, freshdiambil langsung dari petani</p>
+                <hr class="border border-success border-2 opacity-75">
+            </div>
+            <div class="row">
+                <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example" id="pilih">
+                  <option selected disabled value="">Pilih salah satu</option>
+                  <option value="robusta">Robusta</option>
+                  <option value="arabica">Arabica</option>
+                </select>
+            </div>
+            <div id="row_product" class="row">
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script> 
+    api = "https://rikikurnia.com/prakerja/api/produk/"
+        pilih.onchange = function(){
+            var kopi_yang_dipilih = this.value
+            var url = api + kopi_yang_dipilih
+            
+            row_product.innerHTML = ""
+            $.get(url).then(function (respon){
+            respon.data.forEach(item => {
+                var produk = `<div class="col-lg-4 mb-5">
+                  <div class="card" style="width: 18rem;">
+                  <img src="${item.foto}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col">
+                        <h5 class="card-title">${item.nama}</h5>
+                      </div>
+                      <div class="col">
+                        <p class="card-text">${item.harga}</p>
+                      </div>
+                    </div>
+                    <a href="#" class="btn btn-primary w-100">Beli <i class="bi bi-cart"></i></a>
+                  </div>
+                </div>
+              </div>`
+
+                row_product.innerHTML += produk
+              })
+            })         
+        }
+    </script>
+  </body>
+</html>

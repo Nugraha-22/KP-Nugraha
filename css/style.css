@@ -1,0 +1,337 @@
+/* Pengaturan Global */
+
+@font-face {
+   font-family: 'Poppins';
+   src: url(../fonts/poppins.woff2);
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   font-family: 'Poppins';
+}
+
+.bg-kopi {
+   background-color: rgb(13, 36, 13);
+}
+
+
+.baris {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+h1 {
+   font-size: 40px;
+}
+
+
+section {
+   padding-top: 80px;
+   padding-bottom: 80px;
+   margin-top: 40px;
+   margin-bottom: 40px;
+   display: flex;
+}
+
+h2 {
+   font-size: 35px;
+   text-align: center;
+   margin-bottom: 30px;
+}
+
+p.sub {
+   font-size: 18px;
+   width: 800px;
+   max-width: 100%;
+   text-align: center;
+   margin: auto;
+   margin-bottom: 40px;
+}
+
+
+
+img,
+video {
+   max-width: 100%;
+}
+
+
+
+
+/* Navigasi */
+
+nav {
+   background-color: rgb(13, 36, 13);
+   padding-left: 30px;
+   padding-right: 30px;
+}
+
+nav .chat {
+   width: 100px;
+   height: 30px;
+   text-decoration: none;
+   background-color: green;
+   color: white;
+   text-align: center;
+   line-height: 1.9rem;
+}
+
+nav .baris {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 50px;
+}
+
+.logo {
+   height: 40px;
+}
+
+nav button {
+   width: 100px;
+   height: 30px;
+}
+
+.navigasi {
+   display: flex;
+   list-style: none;
+   margin-right: 40px;
+   align-items: center;
+   margin-left: auto;
+   text-align: center;
+}
+
+.navigasi li {
+   width: 100px;
+}
+
+.navigasi li a {
+   color: #fff;
+   text-decoration: none;
+}
+
+/* Header */
+
+header {
+   padding-left: 50px;
+   padding-top: 80px;
+   padding-bottom: 80px;
+}
+
+header .baris {
+   display: flex;
+   align-items: center;
+}
+
+header .kiri {
+   width: 50%;
+   padding-right: 100px;
+}
+
+header .kanan {
+   width: 50%;
+}
+
+header .kiri h1 {
+   margin-bottom: 25px;
+}
+
+header .kiri p.tagline {
+   margin-bottom: 20px;
+   font-size: 20px;
+}
+
+header .kiri .cta p {
+   font-size: 16px;
+   margin-bottom: 20px;
+}
+
+header .kiri .cta a {
+   text-decoration: none;
+}
+
+header .kiri .cta img {
+   height: 50px;
+}
+
+/* Best Seller */
+section.best-seller {
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   background-color: #EFE6DC;
+}
+
+
+
+/* About Us */
+section.about-us{
+   display: flex;
+   flex-direction: column;
+}
+
+section.about-us img {
+   width: 500px;
+   margin-bottom: 40px;
+   border-radius: 10px;
+   align-self: center;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+}
+
+p.penjelasan {
+   font-size: 18px;
+   width: 800px;
+   max-width: 100%;
+   text-align: center;
+   margin: auto;
+   margin-bottom: 40px;
+}
+
+/* Our Team */
+section.our-team {
+   display: flex;
+   flex-direction: column;
+   background-color: #EFE6DC;
+}
+
+.tim {
+   padding: 10px;
+}
+
+.tim img {
+   width: 250px;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+}
+
+
+/* Review */
+section.review {
+   display: flex;
+   flex-direction: column;
+}
+
+.testimoni {
+   width: 400px;
+   padding: 20px;
+   background-color: #EFE6DC;
+   margin: 20px;
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   -ms-border-radius: 5px;
+   -o-border-radius: 5px;
+}
+
+.testimoni .profile{
+   display: flex;
+   align-items: center;
+   padding-bottom: 20px;
+}
+
+.testimoni .profile img {
+   width: 100px;
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   -ms-border-radius: 5px;
+   -o-border-radius: 5px;
+}
+
+.testimoni .profile .titel {
+   padding: 10px;
+}
+
+
+/* Contact Us */
+section.contact-us{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.kolom {
+   text-align: center;
+   margin: 120px;
+}
+
+/* Footer */
+footer {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   background-color: rgb(13, 36, 13);
+   height: 80px;
+}
+
+footer p {
+   margin-left: 200px;
+   color: white;
+}
+
+
+/* Produk */
+.produk{
+   padding: 10px;
+   text-align: center;
+}
+
+.produk img {
+   width: 250px;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+}
+
+
+/* Media */
+@media (max-width:768px) {
+   .navigasi {
+      display: none;
+   }
+
+   nav .baris {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   header .baris {
+      flex-direction: column;
+      text-align: center;
+   }
+
+   header .kiri {
+      width: 100%;
+      order: 2;
+   }
+
+   header .kanan {
+      width: 100%;
+   }
+
+   section.review .baris{
+      flex-direction: column;
+   }
+
+   .kolom {
+      margin: 50px;
+   }
+}
