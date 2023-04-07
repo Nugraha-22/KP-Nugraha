@@ -4,226 +4,335 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Website Kopi Kuy</title>
+    <title>Website | Kopi Kuy</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- POPPINS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700&display=swap"
+      rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="vendor/bootstrap-icons.css" />
+    <!-- Animate -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
-
   <body>
-    <nav>
-      <div class="baris">
-        <img src="images/logo_kuy.png" alt="logo kopi kuy" class="logo" />
-        <ul class="navigasi">
-          <li>
-            <a href="#best-seller">Best Seller</a>
-          </li>
-          <li>
-            <a href="#our-team">Our Team</a>
-          </li>
-          <li>
-            <a href="#review">Review</a>
-          </li>
-          <li>
-            <a href="#contact-us">Contact Us</a>
-          </li>
-          <li>
-            <a href="index2.html">Shop</a>
-          </li>
-        </ul>
-        <a role="button" class="chat" href="https://wa.me/6281290465033"
-          >Chat</a
-        >
-      </div>
-    </nav>
-
     <header>
-      <div class="baris">
-        <div class="kiri">
-          <h1>Kopi Kuy <img src="images/icon_kopi.svg" alt="" /></h1>
-          <p class="tagline">
-            Kopi Kuy merupakan sebuah startup kopi retail yang ingin menyajikan
-            high quality Coffee untuk para pelanggannya.
-          </p>
-          <div class="cta">
-            <p>Dapat dibeli melalui</p>
-            <a href=""><img src="images/logo_bukalapak.png" alt="" /></a>
-            <a href=""><img src="images/logo_shopee.png" alt="" /></a>
-            <a href=""><img src="images/logo_tokopedia.png" alt="" /></a>
+      <!-- Navbar -->
+      <div class="navbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-brands">
+              <img src="images/logo_kuy.png" alt="" />
+            </div>
+            <div class="col-menu">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Best Seller</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Review</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li>
+                  <a href="produk.html" class="btn-shop"
+                    >Shop <i class="bi bi-cart"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="kanan">
-          <img src="images/banner1.png" alt="" />
+      </div>
+      <!-- Navbar -->
+
+      <!-- Hero -->
+      <div class="hero">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h1 class="animate__animated animate__fadeInDown">
+                SELAMAT DATANG DI WEBSITE KAMI
+              </h1>
+              <p
+                style="margin-bottom: 10px"
+                class="animate__animated animate__fadeInDown">
+                Kopi Kuy merupakan sebuah startup kopi retail yang ingin
+                menyajikan high quality Coffee untuk para pelanggannya.
+              </p>
+              <p class="animate__animated animate__fadeInDown">
+                Dapat dibeli melalui:
+              </p>
+              <div class="row animate__animated animate__fadeInDown">
+                <img src="images/logo_bukalapak.png" alt="" />
+                <img src="images/logo_shopee.png" alt="" />
+                <img src="images/logo_tokopedia.png" alt="" />
+              </div>
+            </div>
+            <div class="col animate__animated animate__fadeInRight">
+              <img src="images/banner barista 4.png" alt="" />
+            </div>
+          </div>
         </div>
       </div>
+      <!-- Hero -->
     </header>
 
-    <section id="best-seller" class="best-seller">
-      <h2>Menu Andalan Kami</h2>
-      <p class="sub">Nikmati menu andalan yang menjadi favorit customer Kami</p>
-      <div class="baris">
-        <div class="produk">
-          <img src="images/product_latte.jpg" alt="" />
-          <p>Cafe Latte</p>
+    <!-- Best Seller -->
+    <div class="best-seller">
+      <div class="container">
+        <div class="row" data-aos="fade-up" data-aos-duration="1000">
+          <h1>BEST SELLER</h1>
+          <p>Nikmati menu andalan yang menjadi favorit customer Kami</p>
         </div>
-        <div class="produk">
-          <img src="images/product_capuchino.jpg" alt="" />
-          <p>Cappuchino</p>
-        </div>
-        <div class="produk">
-          <img src="images/product_espresso.jpg" alt="" />
-          <p>Double Espresso</p>
-        </div>
-        <div class="produk">
-          <img src="images/product_kopi_susu.jpg" alt="" />
-          <p>Es Kopi Kuy</p>
+        <div class="row">
+          <div
+            class="col"
+            data-aos="flip-down"
+            data-aos-duration="1000"
+            data-aos-delay="300">
+            <img src="images/product_capuchino.jpg" alt="" />
+            <span>Capuchino</span>
+          </div>
+          <div
+            class="col"
+            data-aos="flip-down"
+            data-aos-duration="1000"
+            data-aos-delay="600">
+            <img src="images/product_espresso.jpg" alt="" />
+            <span>Espresso</span>
+          </div>
+          <div
+            class="col"
+            data-aos="flip-down"
+            data-aos-duration="1000"
+            data-aos-delay="900">
+            <img src="images/product_kopi_susu.jpg" alt="" />
+            <span>Kopi Susu</span>
+          </div>
+          <div
+            class="col"
+            data-aos="flip-down"
+            data-aos-duration="1000"
+            data-aos-delay="1200">
+            <img src="images/product_latte.jpg" alt="" />
+            <span>Latte</span>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+    <!-- Best Seller -->
 
-    <section id="about-us" class="about-us">
-      <h2>Gak Ngopi Gak Kuy!</h2>
-      <p class="sub">
-        Didirikan pada 2017, Kopi Kuy merupakan sebuah startup kopi retail yang
-        ingin menyajikan kopi dengan kualitas tinggi untuk para pelanggannya.
-        Nama Kuy yang diambil dari "yuk" yang merupakan harapan kami untuk
-        mengajak semua yang terlibat dalam bisnis kami untuk bersama-sama
-        menikmati sajian kopi yang berkualitas.
-      </p>
-      <img src="images/aset_kopi_jumbo.png" alt="" />
-      <p class="penjelasan">
-        Kopi yang kami jual, hanya dari petani terpilih, dan berkualitas tinggi
-        diproses secara sempurna dan diteruskan oleh para barista handal, yang
-        penuh semangat dalam menyiapkan segelas kebahagiaan spesial untuk anda
-      </p>
-    </section>
-
-    <section id="our-team" class="our-team">
-      <h2>Tim Kami</h2>
-      <p class="sub">
-        Kami berinvestasi dalam rasa - mulai dari pemilihan biji, metode
-        pemanggangan, hingga barista dengan sertifikat internasional.
-      </p>
-      <div class="baris">
-        <div class="tim">
-          <img src="images/team4.jpg" alt="" />
-          <h3>Riki Steven</h3>
-          <p>Founder Kopi Kuy</p>
-        </div>
-        <div class="tim">
-          <img src="images/team7.jpg" alt="" />
-          <h3>Andi Asraf</h3>
-          <p>Head of Marketing</p>
-        </div>
-        <div class="tim">
-          <img src="images/team5.jpg" alt="" />
-          <h3>Angelina Felly</h3>
-          <p>Barista</p>
-        </div>
-        <div class="tim">
-          <img src="images/team2.jpg" alt="" />
-          <h3>Sarah Chou</h3>
-          <p>Barista</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="review" class="review">
-      <h2>Apa Kata Mereka</h2>
-      <p class="sub">
-        Kami berikan fakta dan data, karena kepuasan konsumen selalu nomor 1
-        untuk kami.
-      </p>
-
-      <div class="baris">
-        <div class="testimoni">
-          <div class="profile">
-            <img src="images/customer1.jpg" alt="" />
-            <div class="titel">
-              <h3>Benny Oktavian</h3>
-              <p>Mahasiswa</p>
-            </div>
-          </div>
+    <!-- About Us -->
+    <div class="about">
+      <div class="container">
+        <div class="row" data-aos="fade-up" data-aos-duration="1000">
+          <h1>Gak Ngopi Gak Kuy!</h1>
           <p>
-            "Perdana kesini langsung merasa cocok dari segi tempat dan rasa.
-            Baristanya ramah dan pelayanannya maksimal, tidak sungkan bertanya
-            keinginan pengunjung."
+            Didirikan pada 2017, Kopi Kuy merupakan sebuah startup kopi retail
+            yang ingin menyajikan kopi dengan kualitas tinggi untuk para
+            pelanggannya. Nama Kuy yang diambil dari "yuk" yang merupakan
+            harapan kami untuk mengajak semua yang terlibat dalam bisnis kami
+            untuk bersama-sama menikmati sajian kopi yang berkualitas.
           </p>
-        </div>
-        <div class="testimoni">
-          <div class="profile">
-            <img src="images/customer3.jpg" alt="" />
-            <div class="titel">
-              <h3>Rena Oktaviana</h3>
-              <p>Karyawan Swasta</p>
-            </div>
-          </div>
+          <img src="images/aset_kopi_jumbo.png" alt="" />
           <p>
-            Asik buat santai sm tmn2, tempatnya nyaman dan yg bikin seru banyak
-            game2nya yg bs dimainkan bareng tmn2 atau saudara, menunya enak2,
-            pokoknya recomend banget deh tempatnya wajib coba guys!!!
-            Pelayanannya ramah banget 🤗."
-          </p>
-        </div>
-        <div class="testimoni">
-          <div class="profile">
-            <img src="images/customer2.jpg" alt="" />
-            <div class="titel">
-              <h3>Bagas Renaldo</h3>
-              <p>Dosen</p>
-            </div>
-          </div>
-          <p>
-            "Tempat nya nyaman sekali pasti kalo kalian dateng betah ... selain
-            tempat yang nyaman lalu pelayanan nya good banget... dan kalian yang
-            datang ke kopi kuy jangan lewatkan permainan yang disediakan oleh
-            kopi kuy , banyak banget game nya!"
+            Kopi yang kami jual, hanya dari petani terpilih, dan berkualitas
+            tinggi diproses secara sempurna dan diteruskan oleh para barista
+            handal, yang penuh semangat dalam menyiapkan segelas kebahagiaan
+            spesial untuk anda
           </p>
         </div>
       </div>
-    </section>
+    </div>
+    <!-- About Us -->
 
-    <section id="contact-us" class="contact-us">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7932.741866032694!2d106.668581!3d-6.214715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f9912c7f297b%3A0xe5a3a671dae861ab!2sKopi%20kuy!5e0!3m2!1sid!2sid!4v1680584125196!5m2!1sid!2sid"
-        width="100%"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <div class="baris">
-        <div class="kolom">
+    <!-- Our Team -->
+    <div class="team">
+      <div class="container">
+        <div class="row" data-aos="fade-up" data-aos-duration="1000">
+          <h1>OUR TEAM</h1>
+          <p>
+            Kami berinvestasi dalam rasa - mulai dari pemilihan biji, metode
+            pemanggangan, hingga barista dengan sertifikat internasional.
+          </p>
+        </div>
+        <div class="row">
+          <div
+            class="col"
+            data-aos="flip-down"
+            data-aos-duration="1000"
+            data-aos-delay="300">
+            <img src="images/team6.jpg" alt="" />
+            <span>Riki Steven</span>
+            <p>Founder Kopi Kuy</p>
+          </div>
+          <div
+            class="col"
+            data-aos="flip-down"
+            data-aos-duration="1000"
+            data-aos-delay="600">
+            <img src="images/team4.jpg" alt="" />
+            <span>Andi Asraf</span>
+            <p>Head of Marketting</p>
+          </div>
+          <div
+            class="col"
+            data-aos="flip-down"
+            data-aos-duration="1000"
+            data-aos-delay="900">
+            <img src="images/team1.jpg" alt="" />
+            <span>Angelina Felly</span>
+            <p>Barista</p>
+          </div>
+          <div
+            class="col"
+            data-aos="flip-down"
+            data-aos-duration="1000"
+            data-aos-delay="1200">
+            <img src="images/team2.jpg" alt="" />
+            <span>Sarah Chou</span>
+            <p>Barista</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Our Team -->
+
+    <!-- Review -->
+    <div class="review">
+      <div class="container">
+        <div class="row" data-aos="fade-up" data-aos-duration="1000">
+          <h1>Apa Kata Mereka</h1>
+          <p>
+            Kami berikan fakta dan data, karena kepuasan konsumen selalu nomor 1
+            untuk kami.
+          </p>
+        </div>
+        <div class="row">
+          <div
+            class="col"
+            data-aos="flip-down"
+            data-aos-duration="1000"
+            data-aos-delay="300">
+            <div class="row-profile">
+              <img src="images/customer1.jpg" alt="" />
+              <div class="col-profile">
+                <span>Benny Oktavian</span>
+                <p>Mahasiswa</p>
+              </div>
+            </div>
+            <p>
+              "Perdana kesini langsung merasa cocok dari segi tempat dan rasa.
+              Baristanya ramah dan pelayanannya maksimal, tidak sungkan bertanya
+              keinginan pengunjung."
+            </p>
+          </div>
+          <div
+            class="col"
+            data-aos="flip-down"
+            data-aos-duration="1000"
+            data-aos-delay="600">
+            <div class="row-profile">
+              <img src="images/customer3.jpg" alt="" />
+              <div class="col-profile">
+                <span>Rena Oktaviana</span>
+                <p>Karyawan Swasta</p>
+              </div>
+            </div>
+            <p>
+              Asik buat santai sm tmn2, tempatnya nyaman dan yg bikin seru
+              banyak game2nya yg bs dimainkan bareng tmn2 atau saudara, menunya
+              enak2, pokoknya recomend banget deh tempatnya wajib coba guys!!!
+              Pelayanannya ramah banget 🤗."
+            </p>
+          </div>
+          <div
+            class="col"
+            data-aos="flip-down"
+            data-aos-duration="1000"
+            data-aos-delay="900">
+            <div class="row-profile">
+              <img src="images/customer2.jpg" alt="" />
+              <div class="col-profile">
+                <span>Bagas Renaldo</span>
+                <p>Dosen</p>
+              </div>
+            </div>
+            <p>
+              "Tempat nya nyaman sekali pasti kalo kalian dateng betah ...
+              selain tempat yang nyaman lalu pelayanan nya good banget... dan
+              kalian yang datang ke kopi kuy jangan lewatkan permainan yang
+              disediakan oleh kopi kuy , banyak banget game nya!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Review -->
+
+    <!-- Contact Us -->
+    <div class="contact">
+      <div class="row" data-aos="fade-up" data-aos-duration="1000">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15865.483732065388!2d106.668581!3d-6.214715000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f9912c7f297b%3A0xe5a3a671dae861ab!2sKopi%20kuy!5e0!3m2!1sid!2sid!4v1680839504513!5m2!1sid!2sid"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="row">
+        <div
+          class="col"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="300">
           <img src="images/icon_phone.png" alt="" />
-          <p>+62 (812) 9046 5034</p>
+          <span>+62 (812) 9046 5034</span>
         </div>
-        <div class="kolom">
-          <img src="images/icon_mail.png" alt="" />
-          <p>hello@kopikuy.com</p>
-        </div>
-        <div class="kolom">
+        <div
+          class="col"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="600">
           <img src="images/icon_instagram.png" alt="" />
-          <p>@kopi.kuy</p>
+          <span>hello@kopikuy.com</span>
+        </div>
+        <div
+          class="col"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="900">
+          <img src="images/icon_mail.png" alt="" />
+          <span>@kopi.kuy</span>
         </div>
       </div>
-    </section>
+    </div>
+    <!-- Contact Us -->
 
+    <!-- Footer -->
     <footer>
-      <div class="baris">
-        <ul class="navigasi">
-          <li>
-            <a href="#best-seller">Best Seller</a>
-          </li>
-          <li>
-            <a href="#our-team">Our Team</a>
-          </li>
-          <li>
-            <a href="#review">Review</a>
-          </li>
-          <li>
-            <a href="#contact-us">Contact Us</a>
-          </li>
-        </ul>
-        <p>Copyright kopi kuy: © 2023 Kopi Kuy. All Rights Reserved</p>
+      <div class="container">
+        <div class="row">
+          <p>&copy; Copyright All Right Reserved by Nugraha</p>
+        </div>
       </div>
     </footer>
+    <!-- Footer -->
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -1,25 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website | Kopi Kuy</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- POPPINS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700&display=swap"
+      rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="vendor/bootstrap-icons.css" />
+    <!-- Animate -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <div class="navbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-brands">
+              <img src="images/logo_kuy.png" alt="" />
+            </div>
+            <div class="col-menu">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Best Seller</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Review</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li>
+                  <a href="#" class="btn-shop"
+                    >Shop <i class="bi bi-cart"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar -->
+    </header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <title>Produk</title>
+    <!-- Product -->
+    <div class="product">
+      <div class="container">
+        <div class="row">
+          <h1>Pilih Produk Anda</h1>
+          <p>
+            Kualitas terbaik biji pilihan, fresh diambil langsung dari petani
+          </p>
+        </div>
+        <div class="row">
+          <select name="" id="select" class="form-select">
+            <option disabled selected>Pilih Salah Satu</option>
+            <option value="robusta">Robusta</option>
+            <option value="arabica">Arabica</option>
+          </select>
+        </div>
+        <div class="row" id="product"></div>
+      </div>
+    </div>
+    <!-- Product -->
 
-    <link rel="stylesheet" href="vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="vendor/bootstrap-icons.css">
-    <script src="vendor/bootstrap.bundle.min.js"></script>
-</head>
+    <!-- Footer -->
+    <footer class="footer-product">
+      <div class="container">
+        <div class="row">
+          <p>&copy; Copyright All Right Reserved by Nugraha</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer -->
 
-<body>
-
+    <!-- JS -->
+    <script src="js/script.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
     <script src="js/jquery-3.6.3.min.js"></script>
     <script>
+      api = "https://rikikurnia.com/prakerja/api/produk/";
+      select.onchange = function () {
+        var kopi_yang_dipilih = this.value;
+        var url = api + kopi_yang_dipilih;
 
+        product.innerHTML = "";
+        $.get(url).then(function (respon) {
+          respon.data.forEach((item) => {
+            var produk = `<div class="col-lg-4 mb-5" data-aos="fade-up">
+                  <div class="card" style="width: 18rem;">
+                  <img src="${item.foto}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col">
+                        <h5 class="card-title">${item.nama}</h5>
+                      </div>
+                      <div class="col">
+                        <p style="color:black;">Rp.${item.harga}</p>
+                      </div>
+                    </div>
+                    <button class="btn-shop">Beli <i class="bi bi-cart"></i></button>
+                  </div>
+                </div>
+              </div>`;
+
+            product.innerHTML += produk;
+          });
+        });
+      };
     </script>
-</body>
-
+  </body>
 </html>
